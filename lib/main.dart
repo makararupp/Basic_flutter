@@ -8,7 +8,7 @@ void main(){
         appBar: AppBar(
           backgroundColor: Colors.lightBlue,
           title: Center(
-            child: Text('សាលារៀនកត្រកៀត',
+            child: Text('អេបតាមដានការសិក្សា',
               style: TextStyle(
                 fontFamily: "Battambang-Bold",
                 fontWeight: FontWeight.bold,
@@ -19,78 +19,36 @@ void main(){
           ),
         ),
 
-        body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                clipBehavior: Clip.hardEdge,
-                height: 120.0,
-                margin: EdgeInsets.all(5.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.0),
-                  color: Colors.redAccent,
-                ),
-                child: Row(
-                    children: [
-                      Expanded(
-                        flex  :3,
-                        child: Container(
-                          height: double.infinity,
-                          color: Colors.brown,
-                          child: Image.asset("images/ninja.jpg",
-                            fit: BoxFit.cover,
-                          ),
-                        )
-                      ),
-                      Expanded(
-                        flex: 5,
-                          child: Container(
-                          height: double.infinity,
-                          color: Colors.purpleAccent,
-                          child: Image.asset("images/Hot late.jpg",
-                            fit: BoxFit.cover,
-                          ),
-                        )
-                      ),
-                    ],
-                ),
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 400.0,
+              color: Colors.purple,
+              child: Image.asset('images/ninja.jpg',
+                fit: BoxFit.cover,
               ),
-              Container(
-
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.0),
-                  color: Colors.yellow,
+            ),
+            Positioned(
+                child:Container(
+                  clipBehavior: Clip.hardEdge,
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: Colors.white.withOpacity(0.5),
+                  ),
+                  child: Text('ជំរាបសួរ ពុកម៉ែបងប្អូន',
+                    style: TextStyle(
+                      fontFamily: "Battambang-Bold",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22.0,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
-                height: 120.0,
-                margin: EdgeInsets.all(5.0),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.0),
-                  color: Colors.blueAccent,
-                ),
-                height: 120.0,
-                margin: EdgeInsets.all(5.0),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.0),
-                  color: Colors.brown,
-                ),
-                height: 120.0,
-                margin: EdgeInsets.all(5.0),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.0),
-                  color: Colors.purpleAccent,
-                ),
-                height: 120.0,
-                margin: EdgeInsets.all(5.0),
-              ),
-            ],
-          ),
+            ),
+          ],
+        )
       ),
     )
   );
